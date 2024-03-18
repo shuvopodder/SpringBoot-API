@@ -16,4 +16,6 @@ public interface SampleService {
     Object Home();
 
     Sample getSampleById(Long id);
+
+    Object getSampleByIdParams(Long id);
 }

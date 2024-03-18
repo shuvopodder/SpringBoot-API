@@ -24,6 +24,11 @@ public class SampleServiceImpl implements SampleService {
     }
 
     @Override
+    public Object getSampleByIdParams(Long id) {
+        return sampleRepository.findById(id).orElseThrow(()-> new DataNotFoundException(id));
+    }
+
+    @Override
     public Sample saveData(Sample sample) {
         return sampleRepository.save(sample);
     }
